@@ -1,0 +1,492 @@
+{
+  "dashboard": {
+    "title": "仪表盘",
+    "description": "系统概览：Gateway 状态、渠道连接、技能启用情况",
+    "loading": "加载仪表盘数据...",
+    "stats": {
+      "channels": "渠道连接",
+      "skills": "启用技能",
+      "usage": "Provider 用量",
+      "uptime": "运行时间",
+      "uptimeOnline": "在线"
+    },
+    "alerts": {
+      "gatewayDisconnected": "Gateway 未连接，数据可能不是最新",
+      "channelErrors": "{{count}} 个渠道连接异常"
+    },
+    "quickNav": {
+      "title": "快捷导航"
+    },
+    "channelOverview": {
+      "title": "已连接渠道",
+      "empty": "暂无已连接渠道"
+    },
+    "skillOverview": {
+      "title": "活跃技能",
+      "empty": "暂无已启用技能"
+    }
+  },
+  "channels": {
+    "title": "渠道",
+    "description": "管理消息渠道：Telegram、Discord、飞书 等",
+    "stats": {
+      "total": "总计",
+      "connected": "已连接",
+      "errors": "错误"
+    },
+    "card": {
+      "lastConnected": "最后连接：{{time}}",
+      "details": "详情",
+      "logout": "登出"
+    },
+    "empty": {
+      "title": "暂无已配置渠道",
+      "description": "点击下方渠道类型开始配置"
+    },
+    "available": {
+      "title": "可用渠道类型",
+      "configured": "已配置",
+      "add": "添加"
+    },
+    "types": {
+      "telegram": "Telegram",
+      "discord": "Discord",
+      "whatsapp": "WhatsApp",
+      "signal": "Signal",
+      "feishu": "飞书",
+      "imessage": "iMessage",
+      "matrix": "Matrix",
+      "line": "LINE",
+      "msteams": "MS Teams",
+      "googlechat": "Google Chat",
+      "mattermost": "Mattermost"
+    },
+    "fields": {
+      "botToken": "Bot Token",
+      "applicationId": "Application ID",
+      "phoneNumber": "手机号",
+      "appId": "App ID",
+      "appSecret": "App Secret",
+      "homeserver": "Homeserver URL",
+      "accessToken": "Access Token",
+      "channelAccessToken": "Channel Access Token",
+      "channelSecret": "Channel Secret",
+      "appPassword": "App Password",
+      "serviceAccount": "Service Account JSON",
+      "serverUrl": "Server URL"
+    },
+    "placeholders": {
+      "botToken": "输入 Bot Token",
+      "applicationId": "输入 Application ID",
+      "phoneNumber": "+86...",
+      "appId": "输入 App ID",
+      "appSecret": "输入 App Secret",
+      "homeserver": "https://matrix.org",
+      "accessToken": "输入 Access Token",
+      "channelAccessToken": "输入 Channel Access Token",
+      "channelSecret": "输入 Channel Secret",
+      "appPassword": "输入 App Password",
+      "serviceAccount": "粘贴 Service Account JSON",
+      "serverUrl": "https://mattermost.example.com"
+    },
+    "configDialog": {
+      "required": "此字段为必填项",
+      "cancel": "取消",
+      "save": "保存"
+    },
+    "qr": {
+      "description": "使用 WhatsApp 手机应用扫描 QR 码以配对",
+      "startPairing": "开始配对",
+      "loading": "正在获取 QR 码...",
+      "scanPrompt": "请用手机扫描 QR 码",
+      "waitingScan": "等待扫码...",
+      "success": "配对成功！",
+      "error": "配对失败"
+    },
+    "logout": {
+      "title": "登出渠道",
+      "description": "确认要登出「{{name}}」吗？登出后需要重新配对。"
+    }
+  },
+  "skills": {
+    "title": "技能",
+    "description": "管理技能与插件：安装、启停、配置",
+    "tabs": {
+      "installed": "已安装",
+      "marketplace": "市场"
+    },
+    "installed": {
+      "searchPlaceholder": "搜索已安装技能..."
+    },
+    "filters": {
+      "all": "全部 ({{count}})",
+      "built-in": "内置 ({{count}})",
+      "marketplace": "市场 ({{count}})"
+    },
+    "source": {
+      "builtIn": "内置",
+      "marketplace": "市场"
+    },
+    "card": {
+      "configure": "配置",
+      "install": "安装",
+      "installing": "安装中...",
+      "missingDeps": "缺少依赖",
+      "coreProtected": "核心技能不可禁用"
+    },
+    "detail": {
+      "info": "信息",
+      "source": "来源",
+      "version": "版本",
+      "author": "作者",
+      "primaryEnv": "主环境变量",
+      "homepage": "主页",
+      "requirements": "依赖项",
+      "config": "配置",
+      "configChecks": "配置检查",
+      "noConfig": "此技能无需配置",
+      "apiKeyPlaceholder": "输入 API Key",
+      "envVars": "环境变量",
+      "addVariable": "添加变量",
+      "noEnvVars": "暂未配置环境变量",
+      "keyPlaceholder": "键名",
+      "valuePlaceholder": "值",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "saving": "保存中..."
+    },
+    "install": {
+      "title": "安装 {{name}}"
+    },
+    "marketplace": {
+      "securityNote": "安装前请先审查技能来源、主页说明和依赖要求。当前 Web 端市场基于 Gateway 返回的可安装技能列表展示。",
+      "searchPlaceholder": "搜索市场技能...",
+      "searchButton": "搜索",
+      "emptyTitle": "市场暂无技能",
+      "emptyDescription": "当前 Gateway 未返回可展示的市场技能",
+      "noResults": "没有匹配的市场技能",
+      "installed": "已安装",
+      "version": "版本 {{version}}",
+      "author": "作者 {{author}}",
+      "learnMore": "详情"
+    },
+    "empty": {
+      "title": "暂无技能",
+      "description": "切换 Tab 或修改筛选条件"
+    }
+  },
+  "cron": {
+    "title": "定时任务",
+    "description": "管理定时任务：创建、编辑、启停、立即执行",
+    "stats": {
+      "total": "总计",
+      "active": "运行中",
+      "paused": "已暂停",
+      "failed": "失败"
+    },
+    "card": {
+      "lastRun": "上次运行",
+      "nextRun": "下次运行",
+      "runNow": "立即执行"
+    },
+    "presets": {
+      "everyHour": "每小时",
+      "daily9am": "每天 9:00",
+      "daily6pm": "每天 18:00",
+      "weeklyMon": "每周一 9:00",
+      "monthlyFirst": "每月 1 日",
+      "every30min": "每 30 分钟"
+    },
+    "dialog": {
+      "createTitle": "创建定时任务",
+      "editTitle": "编辑定时任务",
+      "name": "任务名称",
+      "namePlaceholder": "输入任务名称",
+      "description": "描述",
+      "descriptionPlaceholder": "可选的任务描述",
+      "schedule": "执行计划",
+      "cronHelp": "标准 cron 表达式：分 时 日 月 周",
+      "message": "消息内容",
+      "messagePlaceholder": "输入发送给 Agent 的消息",
+      "required": "此字段为必填项"
+    },
+    "empty": {
+      "title": "暂无定时任务",
+      "createFirst": "创建第一个任务"
+    },
+    "delete": {
+      "title": "删除定时任务",
+      "description": "确认要删除此定时任务吗？此操作不可撤销。"
+    },
+    "run": {
+      "title": "立即执行",
+      "description": "确认要立即执行此定时任务吗？"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "description": "应用设置：主题、Provider、Gateway、更新",
+    "appearance": {
+      "title": "外观",
+      "theme": "主题",
+      "themeLight": "浅色",
+      "themeDark": "深色",
+      "themeSystem": "跟随系统",
+      "language": "语言",
+      "langZh": "中文",
+      "langEn": "英文"
+    },
+    "providers": {
+      "title": "AI 提供方",
+      "description": "管理 AI 模型供应商配置",
+      "add": "添加提供方",
+      "empty": "尚未配置 AI 提供方",
+      "emptyHint": "点击上方按钮添加第一个 AI 提供方",
+      "apiKeyConfigured": "已配置",
+      "apiKeyNotConfigured": "未配置",
+      "modelCount": "{{count}} 个模型",
+      "deleteTitle": "删除提供方",
+      "deleteDescription": "确认要删除提供方「{{name}}」吗？删除后需要重新配置。",
+      "addDialog": {
+        "title": "添加提供方",
+        "selectType": "选择提供方类型",
+        "backToSelect": "返回选择类型",
+        "providerId": "提供方 ID",
+        "providerIdHint": "配置文件中的唯一标识",
+        "baseUrl": "基础 URL",
+        "apiKey": "API Key",
+        "apiType": "API 类型",
+        "idConflict": "该提供方 ID 已存在",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "editDialog": {
+        "title": "编辑提供方",
+        "apiKeyPlaceholder": "留空保持不变",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "models": {
+        "title": "模型列表",
+        "add": "添加模型",
+        "remove": "删除模型",
+        "empty": "暂未配置模型，点击上方按钮添加",
+        "untitled": "未命名模型",
+        "id": "模型 ID",
+        "name": "显示名称",
+        "reasoning": "推理能力",
+        "inputTypes": "输入类型",
+        "input_text": "文本",
+        "input_image": "图片",
+        "yes": "支持",
+        "no": "不支持",
+        "apiOverride": "API 覆盖",
+        "inheritProvider": "继承提供方",
+        "contextWindow": "上下文窗口",
+        "maxTokens": "最大输出 Token",
+        "cost": "计费（$/百万 Token）",
+        "costHint": "单位为美元/百万 Token，0 表示免费",
+        "cost_input": "输入",
+        "cost_output": "输出",
+        "cost_cacheRead": "缓存读取",
+        "cost_cacheWrite": "缓存写入",
+        "showAdvanced": "高级兼容性选项",
+        "hideAdvanced": "收起高级选项",
+        "default": "默认",
+        "thinkingFormat": "思考格式",
+        "maxTokensField": "maxTokens 字段名",
+        "compat_supportsStore": "支持存储/记忆",
+        "compat_supportsDeveloperRole": "支持开发者角色",
+        "compat_supportsReasoningEffort": "支持推理强度",
+        "compat_supportsUsageInStreaming": "流式返回用量",
+        "compat_supportsStrictMode": "支持严格模式",
+        "compat_requiresToolResultName": "工具结果需含名称",
+        "compat_requiresAssistantAfterToolResult": "工具结果后需 assistant",
+        "compat_requiresThinkingAsText": "思考以文本返回",
+        "compat_requiresMistralToolIds": "Mistral 工具 ID"
+      }
+    },
+    "gateway": {
+      "title": "Gateway",
+      "description": "Gateway 运行状态",
+      "version": "版本",
+      "port": "端口",
+      "uptime": "运行时间",
+      "mode": "运行模式",
+      "nodeVersion": "Node.js",
+      "platform": "平台",
+      "refresh": "刷新",
+      "notConnected": "Gateway 未连接",
+      "notConnectedHint": "请确保 OpenClaw Gateway 正在运行",
+      "uptimeFormat": "{{hours}}h {{minutes}}m"
+    },
+    "update": {
+      "title": "更新",
+      "currentVersion": "当前版本",
+      "channel": "更新通道",
+      "checkUpdate": "检查更新",
+      "updating": "正在更新...",
+      "confirmTitle": "确认更新",
+      "confirmDescription": "更新过程中 Gateway 将重启，连接将短暂中断。确定继续？",
+      "resultOk": "更新成功，版本从 {{before}} 升级到 {{after}}，Gateway 正在重启",
+      "resultNoop": "已是最新版本",
+      "resultError": "更新失败：{{reason}}"
+    },
+    "advanced": {
+      "title": "高级",
+      "devMode": "开发者模式",
+      "devModeHint": "启用后将显示开发者工具选项"
+    },
+    "developer": {
+      "title": "开发者工具",
+      "gatewayToken": "Gateway Token",
+      "tokenConfigured": "已配置",
+      "tokenHint": "使用 CLI `openclaw config get gateway.auth.token` 查看完整 Token",
+      "configPath": "配置文件路径",
+      "rawConfig": "原始配置",
+      "showConfig": "展开",
+      "hideConfig": "收起",
+      "wsUrl": "WebSocket URL",
+      "connectionStatus": "连接状态",
+      "copied": "已复制"
+    },
+    "about": {
+      "title": "关于",
+      "appName": "OpenClaw Office",
+      "tagline": "多 Agent 协作可视化监控",
+      "version": "版本",
+      "docs": "文档",
+      "github": "GitHub"
+    },
+    "restartWarning": "保存配置后 Gateway 将自动重启，连接将短暂中断",
+    "configConflict": "配置已被其他客户端修改，已自动重新加载"
+  },
+  "viewModels": {
+    "statusLabels": {
+      "connected": "已连接",
+      "disconnected": "未连接",
+      "connecting": "连接中",
+      "error": "错误"
+    },
+    "taskStatus": {
+      "active": "活跃",
+      "paused": "已暂停"
+    },
+    "schedule": {
+      "daily": "每天 {{time}}",
+      "weekly": "每周 {{day}} {{time}}",
+      "every": "每 {{minutes}}m",
+      "at": "于 {{time}}",
+      "unknown": "未知"
+    },
+    "skillSource": {
+      "builtIn": "内置",
+      "marketplace": "市场"
+    }
+  },
+  "agents": {
+    "title": "智能体管理",
+    "description": "管理智能体配置、核心文件和模型设置",
+    "panelTitle": "智能体",
+    "detailDescription": "智能体 {{id}} 的工作空间与路由配置",
+    "configured": "已配置 {{count}} 个",
+    "refresh": "刷新",
+    "searchPlaceholder": "搜索智能体...",
+    "noAgents": "暂无智能体",
+    "noAgentsDesc": "尚未配置任何智能体",
+    "selectAgent": "选择一个智能体",
+    "selectAgentDesc": "从左侧列表中选择一个智能体查看详情",
+    "defaultBadge": "默认",
+    "addAgent": "添加智能体",
+    "tabs": {
+      "overview": "概览",
+      "files": "文件",
+      "tools": "工具",
+      "skills": "技能",
+      "channels": "渠道",
+      "cronJobs": "定时任务"
+    },
+    "overview": {
+      "title": "基本信息",
+      "agentId": "智能体 ID",
+      "name": "名称",
+      "workspace": "工作空间",
+      "isDefault": "默认智能体",
+      "yes": "是",
+      "no": "否",
+      "modelConfig": "模型配置",
+      "primaryModel": "主模型",
+      "primaryModelPlaceholder": "选择主模型...",
+      "fallbackModels": "备选模型",
+      "fallbackPlaceholder": "选择备用模型...",
+      "addFallback": "添加备选模型",
+      "save": "保存",
+      "saving": "保存中...",
+      "saveSuccess": "保存成功",
+      "saveError": "保存失败",
+      "deleteAgent": "删除智能体",
+      "cannotDeleteDefault": "无法删除默认智能体"
+    },
+    "files": {
+      "title": "核心文件",
+      "description": "引导式角色设定、身份信息与工具使用说明。",
+      "workspace": "工作空间",
+      "noFiles": "暂无文件",
+      "selectFile": "选择一个文件查看内容",
+      "content": "内容",
+      "reset": "重置",
+      "save": "保存",
+      "saving": "保存中...",
+      "saveSuccess": "文件已保存",
+      "saveError": "保存失败",
+      "unsavedChanges": "有未保存的更改",
+      "justNow": "刚刚",
+      "hoursAgo": "{{count}} 小时前",
+      "daysAgo": "{{count}} 天前"
+    },
+    "tools": {
+      "title": "工具策略",
+      "profile": "策略配置",
+      "allowList": "允许列表",
+      "denyList": "禁止列表",
+      "noConfig": "该智能体未配置工具策略",
+      "all": "全部"
+    },
+    "skills": {
+      "title": "技能配置",
+      "noRestriction": "无技能限制（使用所有已启用技能）",
+      "defaultConfig": "使用默认技能配置",
+      "allowedSkills": "允许的技能"
+    },
+    "channels": {
+      "title": "频道路由",
+      "noBindings": "该智能体未绑定任何频道"
+    },
+    "cronJobs": {
+      "title": "定时任务",
+      "noCronJobs": "该智能体无定时任务"
+    },
+    "createDialog": {
+      "title": "添加新智能体",
+      "name": "名称",
+      "namePlaceholder": "输入智能体名称",
+      "nameRequired": "请输入名称",
+      "workspace": "工作空间路径",
+      "workspacePlaceholder": "例如: ~/.openclaw/workspace-myagent",
+      "workspaceRequired": "请输入工作空间路径",
+      "emoji": "表情",
+      "emojiPlaceholder": "例如: 🤖",
+      "cancel": "取消",
+      "create": "创建",
+      "creating": "创建中..."
+    },
+    "deleteDialog": {
+      "title": "删除智能体",
+      "confirm": "确认要删除智能体「{{name}}」吗？此操作不可逆。",
+      "deleteFiles": "同时删除工作空间文件",
+      "cancel": "取消",
+      "delete": "删除",
+      "deleting": "删除中..."
+    }
+  }
+}
